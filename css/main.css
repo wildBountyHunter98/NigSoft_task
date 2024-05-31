@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form,
+.page_list,
+.display_userData {
+    width: 500px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inputBox,
+.radioBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.inputBox label {
+    text-transform: capitalize;
+}
+
+.inputBox input[type=text],
+.inputBox input[type=password],
+.inputBox textarea {
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-inline: 5px;
+
+}
+
+.inputBox input[type=text],
+.inputBox input[type=password] {
+    height: 35px;
+}
+
+.btn {
+    outline: 0;
+    padding: 5px 15px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.popup_message {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+
+.page_list {
+    max-height: 300px;
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.page_list::-webkit-scrollbar {
+    display: none;
+}
+
+.page_list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.page_list li:hover {
+    background: lightskyblue;
+}
+
+.page_list li .options {
+    display: flex;
+    gap: 10px;
+}
+
+/* PopUp Window */
+
+.popup_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.6);
+    z-index: 1001;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_container .popup_content {
+    position: relative;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.popup_content .popup_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 0;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.popup_close:hover {
+    transform: scale(1.2);
+}
+
+.popup_content .title {
+    user-select: none;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    background: #3AA9D7;
+    color: #fff;
+    padding-inline: 15px;
+}
+
+.popup_content .title span{
+    margin-right: 36px;
+}
+
+.popup_content .content {
+    padding: 15px;
+}
